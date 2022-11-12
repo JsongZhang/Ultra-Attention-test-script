@@ -36,7 +36,7 @@ def main():
     class_indict = json.load(json_file)
 
     # create model
-    model = create_model(num_classes=13).to(device) #这个去掉了, has_logits=False
+    model = create_model(num_classes=13).to(device)
     # load model weights
     model_weight_path = "./Ultra-Attention_int21k_partTF(12_4)_SGD_focus_model_13class_299.pth"
     model.load_state_dict(torch.load(model_weight_path, map_location=device))
